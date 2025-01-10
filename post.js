@@ -123,87 +123,89 @@ async function detectMediaType(url) {
     }
 }
 
-app.get('/download', async (req, res) => {
+// Helper function to get file extension from content type
+function getFileExtension(contentType) {
+    const types = {
+        'video/mp4': '.mp4',
+        'image/jpeg': '.jpg',
+        'image/jpg': '.jpg',
+        'image/png': '.png'
+    };
+    return types[contentType] || '.jpg';
+}
+
+// Handle downloads
+router.get('/download', async (req, res) => {
+    const { url, filename, type } = req.query;
+    
+    if (!url || !filename) {
+        return res.status(400).json({ 
+            success: false, 
+            message: 'URL and filename are required' 
+        });
+    }
+
     try {
-        const { url, filename, type } = req.query;
-
-        if (!url) {
-            return res.status(400).json({
-                success: false,
-                message: 'Download URL is required'
-            });
-        }
-
-        console.log(`Starting download for URL: ${url}, Type: ${type}`);
-
-        // Create custom headers for the request
-        const requestHeaders = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Accept': 'image/*, video/*',
-            'Accept-Encoding': 'gzip, deflate, br',
-            'Connection': 'keep-alive',
-            'Range': 'bytes=0-'
-        };
-
-        // First get the content information
-        const headResponse = await axios.head(url, { headers: requestHeaders });
-        const contentLength = headResponse.headers['content-length'];
-        const contentType = headResponse.headers['content-type'];
-
-        // Determine if it's an image or video based on content type
-        const isImage = contentType.includes('image');
-        const isVideo = contentType.includes('video');
-
-        // Set the appropriate filename and extension
-        const fileExtension = isVideo ? 'mp4' : 'jpg';
-        const finalFilename = filename || `instagram-${isVideo ? 'video' : 'image'}.${fileExtension}`;
-
-        // Set response headers to force download
-        res.setHeader('Content-Type', 'application/octet-stream'); // Force download
-        res.setHeader('Content-Disposition', `attachment; filename="${finalFilename}"`);
-        res.setHeader('Content-Length', contentLength);
-        res.setHeader('Content-Transfer-Encoding', 'binary');
-        res.setHeader('X-Content-Type-Options', 'nosniff');
-        res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-        res.setHeader('Pragma', 'no-cache');
-        res.setHeader('Expires', '0');
-
-        // Stream the response
+        // Get the file with a streaming response
         const response = await axios({
             method: 'GET',
             url: url,
             responseType: 'stream',
-            headers: requestHeaders,
-            timeout: 30000
+            timeout: 30000,
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
         });
 
-        // Create a transform stream to handle errors
-        const stream = new require('stream').PassThrough();
+        // Get content type and size
+        const contentType = response.headers['content-type'];
+        const contentLength = response.headers['content-length'];
 
-        // Handle stream errors
-        stream.on('error', (error) => {
-            console.error('Stream error:', error);
+        // Determine proper file extension
+        const fileExt = getFileExtension(contentType);
+        const sanitizedFilename = filename.replace(/[^a-zA-Z0-9]/g, '-') + fileExt;
+
+        // Set headers for download
+        res.setHeader('Content-Disposition', `attachment; filename="savereelify.com - ${sanitizedFilename}"`);
+        res.setHeader('Content-Type', contentType);
+        if (contentLength) {
+            res.setHeader('Content-Length', contentLength);
+        }
+
+        // Handle different content types
+        if (type === 'video') {
+            // For videos, we'll pipe the stream directly
+            response.data.pipe(res);
+        } else {
+            // For images, we'll also pipe directly
+            response.data.pipe(res);
+        }
+
+        // Handle errors during streaming
+        response.data.on('error', (error) => {
+            console.error('Error streaming file:', error);
             if (!res.headersSent) {
-                res.status(500).json({
-                    success: false,
-                    message: 'Download failed during streaming',
-                    details: error.message
+                res.status(500).json({ 
+                    success: false, 
+                    message: 'Error downloading file' 
                 });
             }
         });
 
-        // Pipe the response through our error-handling stream
-        response.data.pipe(stream).pipe(res);
-
     } catch (error) {
         console.error('Download error:', error);
-        if (!res.headersSent) {
-            res.status(500).json({
-                success: false,
-                message: 'Download failed',
-                details: error.message
-            });
-        }
+        res.status(500).json({ 
+            success: false, 
+            message: 'Failed to download file' 
+        });
     }
 });
+
+// Optional: Add a route to check download status
+router.get('/download-status/:downloadId', (req, res) => {
+    // Implement download status checking if needed
+    res.json({ status: 'completed' });
+});
+
+module.exports = router;
 module.exports = router;
