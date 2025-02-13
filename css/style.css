@@ -3,13 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  background-color: #e0e0e0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+
 } 
 
 
 body::-webkit-scrollbar {
     display: none;
+
 }
 
 
@@ -19,131 +21,162 @@ nav{
     display: flex;
     height: 80px;
     width: 100%;
-
+    background: none;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12%;
+    padding: 0 8%;
     flex-wrap: wrap;
+    margin-bottom: 2%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 .logo{
   margin-left: 9px;
-  
+  background: none;
 
 }
 .logo-img{
-    position: absolute;
-    border-radius: 20%;
+  position: absolute;
+  border-radius: 20%;
+  width: 2.6rem;
+  margin-top: 0.8%;
 }
 nav .logo-name{
-    color: #800020;
-    font-size: 35px;
-    font-weight: 600;
-    /* position: relative; */
-    margin-left: 53px;
-    margin-top: 3px;
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+  /* position: relative; */
+  margin-left: 43px;
+  background: none;
+  margin-top: 2px;
 
+}
+
+
+.logo-name > a{
+  background: none;
+  color: white;
+  font-size: 1.6rem;
 }
 nav ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  background: transparent;
 }
 nav ul li{
   margin: 0 -7px 0 22px;
+  background: transparent;
 
 }
 nav ul li a{
-  color: #141010;
+  color: white;
   text-decoration: none;
     font-size: 15px;
     font-weight: 400;
     padding: 8px 15px;
     /* border-radius: 93px; */
     letter-spacing: 0px;
+    background: none;
+
 
     /* transition: all 0.3s ease; */
 }
 nav ul li a.active,
 nav ul li a:hover{
-  color: #800020;
+  color: #FCB045;
 
 }
 nav .menu-btn i{
-  color: #800020;
+  color: white;
   font-size: 22px;
   cursor: pointer;
   display: none;
 }
 
 .content {
-  height: 100%;
-  width: 75%;
-  background-color: white;
-  margin: 0 auto; /* Set left and right margins to "auto" for centering */
-  border-radius: 3px;
+
   position: relative;
   border: 1px solid lightgrey;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin-bottom: 32px;
+  max-width: 59rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1.5rem;
 }
 
 
 
-
+.dropdown>a{
+  background: none;
+}
 
   .content>.cont-heading{
     background: none;
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
+    /* font-size: 30px; */
+    /* font-weight: 600; */
+    /* text-align: center; */
     padding: 55px 1px 1px 1px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #1F2937;
+    margin-bottom: 1.5rem;
+    
 
   }
   .search-div{
-    margin: 10px auto;
-    max-width: 600px;
+    margin: 12px auto;
+    /* max-width: 561px; */
+    margin-top: 4%;
     position: relative;
+    background: transparent;
   }
 
   .search{
-    background: white;
+    background: none;
     padding: 0px 3px 0px 0px;
   }
 .search-input{
-    width: 80%;
-    height: 60px;
-    border: 2px solid purple;
-    border-radius: 4px;
-    padding-left: 15px;
-    outline: none;
+  width: 86%;
+  height: 52px;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  padding-left: 18px;
+  outline: none;
 
 }
+
+
 
 .start-btn{
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 60px;
-    width: 120px;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    color: #fff;
-    border: 2px solid #800020;
-    background: purple;
-    font-weight: 400;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 52px;
+  width: 120px;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 0.5rem;
+  color: #fff;
+  border: none;
+  font-weight: 400;
 }
 .hidden-xs{
-    font-size: 14px;
-    border-radius: 4px;
-    color: #fff;
-    border: 1px solid purple;
-    background: purple;
-    font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #fff;
+  /* border: 1px solid purple; */
+  background: none;
+  font-weight: 400;
+  border-radius: 0.5rem;
 }
 
 .fa-arrow-right{
-    background: purple;
+    background: none;
     font-size: 14px;
     font-style: normal;
     
@@ -160,8 +193,8 @@ nav .menu-btn i{
 }
 
 .instruction-h2{
-    position: relative;
-    background: none;
+  position: relative;
+  background: none;
 }
 .p1{
     position: relative;
@@ -183,42 +216,51 @@ nav .menu-btn i{
 .inst-cont{
   position: relative;
   background: none;
-
   margin: 0px 12.5% 10px 17%;
     
 }
 
 
 .t-and-c-p{
-    background: white;
-    text-align: center;
-    padding-top: 6px;
-    font-size: 13px;
+  background: none;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 13px;
+  color: #6B7280;
 
 }
 .t-and-c-link{
     background: none;
-    color: #800020;
+
 }
 
 .after-cont{
-    text-align: center;
+  text-align: center;
+  margin-top: 2rem;
+  background: none;
+  color: white;
+}
+.rew{
+  background: none;
 }
 .after-cont>div>h2>strong{
-    font-weight: 400;
+  font-weight: 400;
+  background: none;
 
 }
 
 .after-cont>div>p{
-    width: 70%;
-    margin: 0% auto 100px auto;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 300;
+  width: 70%;
+  margin: 0% auto 100px auto;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 300;
+  background: none;
 
 }
 .after-cont>div>h2{
-    margin: 0% 0% 1% 0%;
+  margin: 0% 0% 1% 0%;
+  background: none;
 }
 .h1{
     background: rgba(0,0,0,0) radial-gradient(ellipse at center center,rgba(0,0,0,0.2) 0px,rgba(255,255,255,0) 75%) repeat scroll 0 0;
@@ -248,6 +290,7 @@ nav .menu-btn i{
 .left {
   float: left;
   position: absolute;
+  background: none;
   margin: -27px 0% 0% 10.5%;
   width: 40%;
 }
@@ -262,34 +305,44 @@ nav .menu-btn i{
   float: right;
   /* position: absolute; */
   margin-right: 13%;
+  background: none;
 }
 .li1{
   margin-top: -7px;
   padding-bottom: 10px;
+  background: none;
 }
 .li2{
   padding-bottom: 10px;
+  background: none;
 }
 .li3{
   padding-bottom: 10px;
+  background: none;
+}
+.li4{
+  background: none;
 }
 
 .card-title1{
   position: relative;
   margin-left: 5%;
   padding-top: 13px;
-  color: #1a1110;
+  color: white;
+  background: none;
 }
 .card-title{
   position: relative;
   right: 19px;
   bottom: 11px;
   padding-bottom: 13px;
-  color: #1a1110;
-
+  color: white;
+  background: none;
 }
 .nepo{
   position: relative;
+  background: none;
+  color: white;
 
 }
 
@@ -317,13 +370,14 @@ nav .menu-btn i{
   position: relative;
   width: auto;
   margin-bottom: 8%;
+  background: none;
 }
 
 
 .fa{
   font-size: 4rem;
   position: relative;
-  color: #800020;
+  color: white;
 
 }
 .image-container {
@@ -368,6 +422,7 @@ nav .menu-btn i{
     background-color: white;
     font-size: 16px;
     font-weight: 300;
+    background: white;
 }
 
 .table-container td {
@@ -375,11 +430,15 @@ nav .menu-btn i{
     text-align: left;
     padding: 14px 27px;
     background-color: white;
+    background: white;
 
+}
+tbody{
+  background: white;
 }
 
 .styled-button {
-    background-color: #800020;
+    background-color: white;
     color: white;
     border: none;
     border-radius: 5px;
@@ -443,14 +502,17 @@ nav .menu-btn i{
 
   .table-container ul li a:hover {
     background-color: #ddd;
-    color: #800020;
+    color: white;
   }
 
   .table-container ul li a.active {
     background-color: #ddd;
-    color: #800020;
+    background: white;
+    color: white;
   }
-
+tr{
+  background: white;
+}
   .icon {
     margin-right: 5px; /* Adjust spacing between icon and text */
     font-size: 18px; /* Adjust icon size */
@@ -470,7 +532,22 @@ nav .menu-btn i{
   margin: -6px 48%;
   display: none;
 }
-
+.footer-address {
+  margin: 3% 19%;
+        display: inline-block;
+        position: relative;
+        background: none;
+        color: whitesmoke;
+}
+.pg-link > strong{
+  top: 8px;
+}
+.fa-solid{
+  background: none;
+}
+.fa-regular{
+  background: none;
+}
 @keyframes l5 {
     0%  {box-shadow: 20px 0 #953553, -20px 0 #0002;background: #953553 }
     33% {box-shadow: 20px 0 #953553, -20px 0 #0002;background: #0002}
@@ -481,12 +558,14 @@ nav .menu-btn i{
 
 .red>h3{
 
-  color: #800020;
+  color: white;
   margin-top: 20px;
+  background: none;
 
 }
 .red-p{
   margin-top: 16px;
+  background: none;
 }
 .foot-lakeer{
   background: rgba(0,0,0,0) radial-gradient(ellipse at center center,rgba(0,0,0,0.2) 0px,rgba(255,255,255,0) 75%) repeat scroll 0 0;
@@ -494,10 +573,11 @@ nav .menu-btn i{
   width: 100%;
 
   border-width: 0;
-  border-top: 1px solid darkgrey;
+  border-top: 1px solid whitesmoke;;
 }
 .footer{
   margin-bottom: 0%;
+  background: none;
 }
 
 .copyright{
@@ -505,20 +585,24 @@ nav .menu-btn i{
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   margin-top: 10%;
-  color: #1B1B1B;
+  color: whitesmoke;
+  background: none;
 }
 .footer-address{
-  margin: 3% 17%;
+  margin: 3% 19%;
   display: inline-block;
   position: relative;
 }
 .footer-address>P{
   margin-bottom: 10px;
+  background: none;
+  color: whitesmoke;
 }
 
 .footer-address>p>a{
-  text-decoration: none;
-  color: #1B1B1B;
+
+    color: whitesmoke;
+    background: none;
 
 }
 .footer-address>p>a:hover{
@@ -528,7 +612,7 @@ nav .menu-btn i{
 }
 .footer-address1>p>a:hover{
   text-decoration: underline;
-  color: #1B1B1B;
+  color: whitesmoke;
 
 }
 .footer-address2>p>a:hover{
@@ -543,41 +627,55 @@ nav .menu-btn i{
   margin: 3% 0% 0 -106px;
   position: absolute;
   display: inline-block;
+  background: none;
 }
 .footer-address1>P{
   margin-bottom: 10px;
+  color: whitesmoke;
+  background: none;
 }
 
 .footer-address1>p>a{
-  text-decoration: none;
-  color: #1B1B1B;
+
+  color: whitesmoke;
+  background: none;
 
 }
 
+.footer-address1>p>a:hover{
+  color: #1B1B1B;
+}
 
+.footer-address2>p>a:hover{
+  color: #1B1B1B;
+}
 
 
 .footer-address2{
   margin: 3% 0% 0 142px;
   display: inline-block;
   position: absolute;
+  background: none;
 }
 .footer-address2>P{
   margin-bottom: 10px;
+  background: none;
 }
 
 .footer-address2>p>a{
-  text-decoration: none;
-  color: #1B1B1B;
+    /* text-decoration: none; */
+    color: whitesmoke;
+    background: none;
 
 }
 
 .inst-cont>li{
   margin-left: 24px;
+  background: none;
 }
 
 /* .icons{
-  color: #800020;
+  color: white;
   position: absolute;
   text-align: center;
   margin-top: 79px;
@@ -599,7 +697,7 @@ nav .menu-btn i{
 .thumb-p{
   background: none;
   font-size: 15px;
-  margin-left: 40px;
+
   margin-bottom: 45px;
   width: 80%;
   font-weight: 500;
@@ -609,13 +707,22 @@ input[type="checkbox"]{
 }
 @media (min-width: 920px){
   .thumbnail-image{
-  
-    width: 82%;margin-left: 40px;
+    width: 82%;
+    /* margin-left: 40px; */
+    border-radius: 0.5rem;
   }
 }
 
 @media (max-width: 680px) {
-
+  nav .logo-name {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    /* position: relative; */
+    margin-left: 43px;
+    background: none;
+    margin-top: 0px;
+}
   .table-container td {
     border: 1px solid #dddddd;
     text-align: left;
@@ -657,8 +764,9 @@ input[type="checkbox"]{
 }
 
 .thumbnail-image {
-  max-width: 100%;
+  width: 100%;
   margin-left: 0px;
+  border-radius: 0.5rem;
 }
 
 
@@ -699,7 +807,7 @@ margin-right: 0%;
 }
 
 .styled-button {
-  background-color: #800020;
+  background-color: white;
   color: white;
   border: none;
   border-radius: 5px;
@@ -740,8 +848,9 @@ margin-right: 0%;
 }
 
 .thumbnail-image {
-  max-width: 90%;
+  width: 90%;
   margin: 0 6%;
+  border-radius: 0.5rem;
 }
 .thumb-p{
 background: none;
@@ -775,6 +884,7 @@ font-weight: 500;
     border-radius: 21%;
     padding: 2px 5px 2px 5px;
     display: block;
+    background: #833AB4;
   }
   .search-input{
     width: 90%;
@@ -791,12 +901,12 @@ font-weight: 500;
   .start-btn{
     width: 62px;
   }
-  .cont-hr{
+  .cont-hr {
     margin: 0;
     margin-top: 109px;
     margin-left: 2%;
-
-  }
+    margin-bottom: 6%;
+}
 
   .after-cont>div>p{
     margin: 0px 0% 100px 1%;;
@@ -808,7 +918,7 @@ font-weight: 500;
     position: fixed;
     top: 80px;
     left: -100%;
-    background: #800020;
+    background: white;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -820,8 +930,9 @@ font-weight: 500;
     z-index: 1;
   }
   nav ul li{
-    width: 100%;
+    /* width: 100%; */
     margin: 40px 0;
+    background: transparent;
   }
   nav ul li a{
     width: 100%;
@@ -832,11 +943,15 @@ font-weight: 500;
   }
   #click:checked ~ ul li a{
     margin-left: 0px;
+    
+    background: none;
   }
+
+
   nav ul li a.active,
   nav ul li a:hover{
     background: none;
-    color: red;
+    color: #ff939f;
   }
 
 
@@ -844,8 +959,10 @@ font-weight: 500;
   .content{
     width: 100%;
     clear: right;
-    padding: 0 2%;
+    padding: 8% 2%;
+    margin-top: 4%;
     margin-right: 0;
+    border-radius: 0;
   }
   .left{
     float: left;
@@ -859,6 +976,8 @@ font-weight: 500;
 
 .card-title1{
     padding-top: 0px;
+    background: none;
+    color: white;
 }
 .red{
   display: block;
@@ -943,4 +1062,14 @@ nav .logo-name{
 
 
 }
+.dropdown{
+ 
+    background: none;
 
+}
+.dropdown>a>strong{
+  background: none;
+}
+#selectedItem{
+  background: none;
+}

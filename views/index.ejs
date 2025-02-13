@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="images/favicon.png"> <!-- Adjust the path here -->
-    <link rel="icon" href="/views/assets/images/favicon2.png">
+    <link rel="shortcut icon" href="/images/favicon2.png"> <!-- Adjust the path here -->
+    <link rel="icon" href="/images/favicon2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -21,6 +21,11 @@ body {
       position: absolute;
       display: inline-block;
       margin-left: 7px;
+      background: none;
+    }
+    .poondi{
+      padding: 0;
+      background: none;
     }
 
     .dropdown-content {
@@ -74,7 +79,7 @@ body {
     font-size: 25px;
 }
 .t-and-c-p{
-    background: white;
+    background: none;
     text-align: center;
     padding-top: 6px;
     font-size: 13px;
@@ -83,7 +88,7 @@ body {
 .t-and-c-link{
 
     background: none;
-    color: #800020;
+
 }
 
 
@@ -98,6 +103,8 @@ body {
 
 .nepo{
   position: relative;
+  background: none;
+  color: white;
 
 }
 
@@ -118,30 +125,33 @@ body {
   display: inline-block;
   width: 33%;
   text-align: center;
-
+  background: none;
 }
 
 .icon-sec{
   position: relative;
   width: auto;
   margin-bottom: 8%;
+  
 }
 
 
 .fa{
   font-size: 4rem;
   position: relative;
-  color: #800020;
+  color: #870c29;
+  background: none;
 
 }
 .red>h3{
 
-  color: #800020;
+  color: white;
   margin-top: 20px;
 
 }
 .red-p{
   margin-top: 16px;
+  color: white;
 }
 .foot-lakeer{
   background: rgba(0,0,0,0) radial-gradient(ellipse at center center,rgba(0,0,0,0.2) 0px,rgba(255,255,255,0) 75%) repeat scroll 0 0;
@@ -160,7 +170,7 @@ body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
   margin-top: 10%;
-  color: #1B1B1B;
+  color: white;
 }
 .footer-address{
   margin: 3% 18.6%;
@@ -172,8 +182,8 @@ body {
 }
 
 .footer-address>p>a{
-  text-decoration: none;
-  color: #1B1B1B;
+  /* text-decoration: none; */
+  color: white;
 
 }
 .footer-address>p>a:hover{
@@ -204,8 +214,8 @@ body {
 }
 
 .footer-address1>p>a{
-  text-decoration: none;
-  color: #1B1B1B;
+  /* text-decoration: none; */
+  color: white;
 
 }
 
@@ -235,13 +245,14 @@ body {
 }
 
 .footer-address2>p>a{
-  text-decoration: none;
-  color: #1B1B1B;
+  /* text-decoration: none; */
+  color: white;
 
 }
 .lem{
   margin: 0px -11px 0 31px;
    margin-right: 76px;
+   background: none;
 }
 
 input[type="checkbox"]{
@@ -329,6 +340,7 @@ input[type="checkbox"]{
     border-radius: 21%;
     padding: 2px 5px 2px 5px;
     display: block;
+    background: #833AB4;
   }
   .search-input{
     width: 90%;
@@ -358,7 +370,7 @@ input[type="checkbox"]{
 .lem{
   margin: 0;
   height: 39px;
-  background-color: purple;
+  background-color: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
 }
 
 
@@ -370,7 +382,7 @@ input[type="checkbox"]{
 .dropdown{
   position: relative;
 margin-left: 0;
-    background: purple;
+    background: linear-gradient(135deg, #6814ea 0%, #6B21A8 50%, #701A75 100%);
     width: 100%;
 }
 
@@ -395,7 +407,7 @@ margin-left: 0;
     position: absolute;
     top: 80px;
     /* left: -100%; */
-    background: #800020;
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
     height: 0px;
     width: 100%;
     text-align: center;
@@ -423,7 +435,7 @@ margin-left: 0;
   #click:checked ~ ul li a{
     margin-left: 0px;
     transition: 0.3s ease;
-    background: purple;
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
   }
   nav ul li a.active,
   nav ul li a:hover{
@@ -447,10 +459,12 @@ margin-left: 0;
     width: 92%;
     margin-bottom: 20px;
     z-index: 1;
+    background: none;
   }
 
 .card-title1{
     padding-top: 0px;
+    background: none;
 }
 .red{
   display: block;
@@ -490,6 +504,21 @@ margin-left: 0;
     font-size: larger;
     color: black;
 }
+.pg-link > strong {
+    top: 8px;
+}
+
+.pg-link[href="/index"] {
+    text-align: center;
+    width: 200px;
+    /* height: 200px; */
+    background-color: #c70de0;
+    z-index: 1;
+    padding: 0.65rem 1.6rem;
+    color: white;
+    position: relative;
+    border-radius: 0.5rem;
+}
 }
 .bun{
 
@@ -509,40 +538,31 @@ margin-left: 0;
     background: none;
 }
 
+.sahi{
+
+top: 8px;
+}
+
+.e1, .e2, .e3{
+  background: none;
+}
 .search-div {
-    margin: 9px auto;
+    /* margin: 9px auto;
     max-width: 600px;
-    position: relative;
+    position: relative; */
 }
-.pg-link:hover{
-   width: 200px;
-    /* height: 200px; */
-    background-color: #ddd;
-    z-index: 1;
-    padding: 0.656rem;
-    position: relative;
-    border-bottom-style: 1px solid cornsilk;
-    border-bottom: 2px solid #e0e0e0;
-    /* border-top: 2px solid purple; */
-    /* border-left: 2px solid purple; */
-    /* border-right: 2px solid purple; */
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-}
+
 .pg-link[href="/index"] {
-  width: 200px;
+  text-align: center;
+    width: 200px;
     /* height: 200px; */
-    background-color: #ddd;
+    background-color: #c70de0;
     z-index: 1;
-    padding: 0.656rem;
+    padding: 0.38rem 1.6rem;
+    color: white;
     position: relative;
-    border-bottom-style: 1px solid cornsilk;
-    border-bottom: 2px solid #e0e0e0;
-    /* border-top: 2px solid purple; */
-    /* border-left: 2px solid purple; */
-    /* border-right: 2px solid purple; */
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
+    border-radius: 0.5rem;
+   
 
 }
 @media (max-width: 400px) {
@@ -594,7 +614,7 @@ nav .logo-name{
 }
 
 .next-link{
-  background: white;
+  background: none;
     text-align: center;
     font-size: small;
     /* margin-top: 6px; */
@@ -603,14 +623,42 @@ nav .logo-name{
     font-weight: 600;
 }
 
+
+#selectedItem{
+  background: none;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .pg-link > strong {
+    top: 10px;
+}
+.pg-link[href="/index"] {
+    text-align: center;
+    width: 200px;
+    /* height: 200px; */
+    background-color: #c70de0;
+    z-index: 1;
+    padding: 0.6rem 1.6rem;
+    color: white;
+    position: relative;
+    border-radius: 0.5rem;
+}
+}
+
+.bunz{
+  background: none;
+}
     </style>
 </head>
 <body>
     <nav>
        <div class="logo">
         <a href="/index">
-          <img class="logo-img" src="/images/favicon2.png" height="50px" width="50px" alt=""></a>
-          <p class="logo-name"><a href="/index" style="text-decoration: none; color: #800020;">SaveReelify</a></p>
+          <img class="logo-img" src="/images/favicon2.png" alt=""></a>
+          <p class="logo-name"><a href="/index" style="text-decoration: none; color: white;">SaveReelify</a></p>
        
         </div>
        <input type="checkbox" id="click">
@@ -649,21 +697,21 @@ nav .logo-name{
           <ul class="bun">
             <li class="page">
               <a class="pg-link act" href="/index">
-                <strong class="sahi" style="background: none;position: relative; top: 11px;">
+                <strong class="sahi" style="background: none;position: relative; ">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="10px" height="2rem" viewBox="0 0 122.14 122.88" style="background: none; enable-background:new 0 0 122.14 122.88;" xml:space="preserve" width="2rem">
                     <g>
-                      <path d="M35.14,0H87c9.65,0,18.43,3.96,24.8,10.32c6.38,6.37,10.34,15.16,10.34,24.82v52.61c0,9.64-3.96,18.42-10.32,24.79 l-0.02,0.02c-6.38,6.37-15.16,10.32-24.79,10.32H35.14c-9.66,0-18.45-3.96-24.82-10.32l-0.24-0.27C3.86,105.95,0,97.27,0,87.74 V35.14c0-9.67,3.95-18.45,10.32-24.82S25.47,0,35.14,0L35.14,0z M91.51,31.02l0.07,0.11h21.6c-0.87-5.68-3.58-10.78-7.48-14.69 C100.9,11.64,94.28,8.66,87,8.66h-8.87L91.51,31.02L91.51,31.02z M81.52,31.13L68.07,8.66H38.57l13.61,22.47H81.52L81.52,31.13z M42.11,31.13L28.95,9.39c-4.81,1.16-9.12,3.65-12.51,7.05c-3.9,3.9-6.6,9.01-7.48,14.69H42.11L42.11,31.13z M113.48,39.79H8.66 v47.96c0,7.17,2.89,13.7,7.56,18.48l0.22,0.21c4.8,4.8,11.43,7.79,18.7,7.79H87c7.28,0,13.9-2.98,18.69-7.77l0.02-0.02 c4.79-4.79,7.77-11.41,7.77-18.69V39.79L113.48,39.79z M50.95,54.95l26.83,17.45c0.43,0.28,0.82,0.64,1.13,1.08 c1.22,1.77,0.77,4.2-1,5.42L51.19,94.67c-0.67,0.55-1.53,0.88-2.48,0.88c-2.16,0-3.91-1.75-3.91-3.91V58.15h0.02 c0-0.77,0.23-1.55,0.7-2.23C46.76,54.15,49.19,53.72,50.95,54.95L50.95,54.95L50.95,54.95z" fill="#800020">
+                      <path d="M35.14,0H87c9.65,0,18.43,3.96,24.8,10.32c6.38,6.37,10.34,15.16,10.34,24.82v52.61c0,9.64-3.96,18.42-10.32,24.79 l-0.02,0.02c-6.38,6.37-15.16,10.32-24.79,10.32H35.14c-9.66,0-18.45-3.96-24.82-10.32l-0.24-0.27C3.86,105.95,0,97.27,0,87.74 V35.14c0-9.67,3.95-18.45,10.32-24.82S25.47,0,35.14,0L35.14,0z M91.51,31.02l0.07,0.11h21.6c-0.87-5.68-3.58-10.78-7.48-14.69 C100.9,11.64,94.28,8.66,87,8.66h-8.87L91.51,31.02L91.51,31.02z M81.52,31.13L68.07,8.66H38.57l13.61,22.47H81.52L81.52,31.13z M42.11,31.13L28.95,9.39c-4.81,1.16-9.12,3.65-12.51,7.05c-3.9,3.9-6.6,9.01-7.48,14.69H42.11L42.11,31.13z M113.48,39.79H8.66 v47.96c0,7.17,2.89,13.7,7.56,18.48l0.22,0.21c4.8,4.8,11.43,7.79,18.7,7.79H87c7.28,0,13.9-2.98,18.69-7.77l0.02-0.02 c4.79-4.79,7.77-11.41,7.77-18.69V39.79L113.48,39.79z M50.95,54.95l26.83,17.45c0.43,0.28,0.82,0.64,1.13,1.08 c1.22,1.77,0.77,4.2-1,5.42L51.19,94.67c-0.67,0.55-1.53,0.88-2.48,0.88c-2.16,0-3.91-1.75-3.91-3.91V58.15h0.02 c0-0.77,0.23-1.55,0.7-2.23C46.76,54.15,49.19,53.72,50.95,54.95L50.95,54.95L50.95,54.95z" fill="#b547ff">
                       </path>
                     </g>
                   </svg>  </strong>
                 Reels
               </a>
             </li>
-                        <li class="page"><a class="pg-link" href="/"><strong style="background: none;position: relative; top: 11px;"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="2rem" width="2rem" x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88; background: none;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M61.44,0c33.93,0,61.44,27.51,61.44,61.44s-27.51,61.44-61.44,61.44S0,95.37,0,61.44S27.51,0,61.44,0L61.44,0z M83.31,65.24c3.13-2.02,3.12-4.27,0-6.06L50.98,40.6c-2.55-1.6-5.21-0.66-5.14,2.67l0.1,37.55c0.22,3.61,2.28,4.6,5.32,2.93 L83.31,65.24L83.31,65.24z M61.44,12.48c27.04,0,48.96,21.92,48.96,48.96c0,27.04-21.92,48.96-48.96,48.96S12.48,88.48,12.48,61.44 C12.48,34.4,34.4,12.48,61.44,12.48L61.44,12.48z" fill="#800020"/></g></svg></strong> Posts</a></li>
+                        <li class="page"><a class="pg-link" href="/"><strong style="background: none;position: relative; top: 11px;"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="2rem" width="2rem" x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88; background: none;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style><g><path class="st0" d="M61.44,0c33.93,0,61.44,27.51,61.44,61.44s-27.51,61.44-61.44,61.44S0,95.37,0,61.44S27.51,0,61.44,0L61.44,0z M83.31,65.24c3.13-2.02,3.12-4.27,0-6.06L50.98,40.6c-2.55-1.6-5.21-0.66-5.14,2.67l0.1,37.55c0.22,3.61,2.28,4.6,5.32,2.93 L83.31,65.24L83.31,65.24z M61.44,12.48c27.04,0,48.96,21.92,48.96,48.96c0,27.04-21.92,48.96-48.96,48.96S12.48,88.48,12.48,61.44 C12.48,34.4,34.4,12.48,61.44,12.48L61.44,12.48z" fill="#b547ff"/></g></svg></strong> Posts</a></li>
             <li class="page"><a class="pg-link" href="/mp3"><strong style="background: none;position: relative; top: 11px;"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="2rem" width="2rem" viewBox="0 0 121.699 122.879" enable-background="background: none; new 0 0 121.699 122.879" xml:space="preserve" style="
               background: none;
-          "><g><path fill="#800020" d="M53.613,0c14.79,0,28.202,6.018,37.918,15.694c9.715,9.716,15.693,23.089,15.693,37.918 c0,10.817-3.225,20.926-8.732,29.343l23.207,25.292l-16.008,14.632L83.311,98.256c-8.498,5.664-18.725,8.969-29.698,8.969 c-14.79,0-28.203-6.019-37.918-15.694C5.979,81.814,0,68.44,0,53.612c0-14.79,6.018-28.202,15.695-37.918 C25.41,5.979,38.784,0,53.613,0L53.613,0z M37.534,33.9c7.813-8.622,16.834-13.305,23.597-5.639 c1.773,0.084,3.359,0.671,4.684,1.921c2.781,2.615,3.213,7.508,1.941,11.394v3.392c0.861,0.567,1.418,1.628,1.67,2.835 c0.168,0.777,0.211,1.638,0.125,2.457c-0.082,0.851-0.293,1.659-0.629,2.332c-0.482,0.956-1.219,1.627-2.215,1.774 c-0.979,1.04-1.934,2.153-2.783,3.224c-0.936,1.176-1.734,2.289-2.289,3.203c-0.432,0.704-0.295,1.166-0.137,1.691 c0.072,0.262,0.156,0.535,0.209,0.829c1.713,0.367,3.256,0.661,4.643,0.924c8.811,1.648,14.01,2.163,14.01,13.631 c0,0.588-0.473,1.061-1.061,1.061H30.697c-0.588,0-1.061-0.473-1.061-1.061c0-11.468,5.189-11.982,14.01-13.631 c1.397-0.263,2.961-0.557,4.673-0.924c0.063-0.231,0.137-0.441,0.21-0.651c0.178-0.504,0.357-1.008-0.168-1.858 c-0.557-0.914-1.355-2.026-2.289-3.203c-0.851-1.071-1.807-2.184-2.783-3.224c-0.998-0.146-1.733-0.819-2.216-1.774 c-0.336-0.662-0.546-1.481-0.63-2.331c-0.074-0.819-0.032-1.68,0.126-2.458c0.252-1.208,0.798-2.258,1.648-2.825l-1.145-0.683 c-0.304-3.392,0.588-9.283-3.55-10.396L37.534,33.9L37.534,33.9z M87.283,19.942C78.668,11.328,66.75,5.979,53.613,5.979 c-13.138,0-25.056,5.35-33.67,13.963c-8.614,8.614-13.964,20.532-13.964,33.67c0,13.138,5.35,25.056,13.964,33.67 c8.614,8.614,20.532,13.964,33.67,13.964c13.137,0,25.055-5.35,33.67-13.964c8.613-8.614,13.963-20.532,13.963-33.67 C101.246,40.474,95.896,28.556,87.283,19.942L87.283,19.942L87.283,19.942z"></path></g></svg></strong>DP</a></li>
-          <li class="page"><a class="pg-link" href="/coming-soon"><strong style="background: none;position: relative; top: 11px;"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="2rem" width="2rem" viewBox="0 0 122.64 122.88" style="background: none;"><path fill="#800020"d="M104,31.15c2.31,5.65,5.11,11.94,6.52,17.55a51.83,51.83,0,0,1,1.54,15.24,50.9,50.9,0,0,1-3,15,49.87,49.87,0,0,1-7.24,13.23A49.12,49.12,0,0,1,91,102.49h0a54.85,54.85,0,0,1-4.74,3q-2.44,1.38-5,2.49a52,52,0,0,1-11.38,3.56,49.5,49.5,0,0,1-11.67.82L57,112.28l-2.76,10.28,1.89.15A60.44,60.44,0,0,0,71.05,122a63,63,0,0,0,14.51-4.42q2.94-1.3,5.83-2.93c1.87-1.06,3.75-2.25,5.62-3.55A59.59,59.59,0,0,0,119,82.48,61.68,61.68,0,0,0,120.7,46.1c-2-5.77-4.18-13.39-8.31-19.22-2.73-3.86-10.73-1.57-8.35,4.27ZM56,44.74a5.34,5.34,0,1,1,10.67,0V56.1H78a5.34,5.34,0,0,1,0,10.68H66.66V78.14a5.34,5.34,0,1,1-10.67,0V66.78H44.62a5.34,5.34,0,1,1,0-10.68H56V44.74ZM24.25,110.36a59.9,59.9,0,0,0,11.46,7l1.69.79,2.75-10.25L39,107.35a49.27,49.27,0,0,1-8.38-5.28,50.34,50.34,0,0,1-7.25-6.93l-.85-1-9.17,5.29,1.18,1.43a61.27,61.27,0,0,0,9.72,9.48ZM.57,69.53A59.49,59.49,0,0,0,4,82.67l.65,1.72,9.17-5.29-.44-1.24a49.32,49.32,0,0,1-2.4-9.72,48.75,48.75,0,0,1-.37-10l.07-1.29L.41,54.15.24,56A58.82,58.82,0,0,0,.57,69.53ZM8.38,31c-.92,1.55-1.75,3.11-2.51,4.7l-.81,1.7,10.25,2.75L15.89,39c.58-1.13,1.19-2.23,1.83-3.29s1.35-2.13,2.1-3.17a61.6,61.6,0,0,1,3.9-4.93A53.89,53.89,0,0,1,28,23.22l.93-.85-5.31-9.21-1.44,1.25a66.4,66.4,0,0,0-5.74,5.65,72.56,72.56,0,0,0-5.15,6.41c-1.05,1.48-2,3-2.92,4.5ZM50.44.78A54.27,54.27,0,0,0,40.27,3.52l-1.74.65,5.3,9.18,1.22-.43a44.39,44.39,0,0,1,15.71-2.43c1.21,0,2.48.11,3.79.26s2.51.33,3.74.58,2.55.56,3.8.93,2.5.8,3.79,1.3h0a5.24,5.24,0,1,0,3.79-9.77C78.15,3.2,76.59,2.67,75,2.2s-3.12-.84-4.65-1.15S67.28.5,65.76.33,62.63.05,61,0A55.87,55.87,0,0,0,50.44.78Z"/></svg></strong> Stories</a></li>
+          "><g><path fill="#b547ff" d="M53.613,0c14.79,0,28.202,6.018,37.918,15.694c9.715,9.716,15.693,23.089,15.693,37.918 c0,10.817-3.225,20.926-8.732,29.343l23.207,25.292l-16.008,14.632L83.311,98.256c-8.498,5.664-18.725,8.969-29.698,8.969 c-14.79,0-28.203-6.019-37.918-15.694C5.979,81.814,0,68.44,0,53.612c0-14.79,6.018-28.202,15.695-37.918 C25.41,5.979,38.784,0,53.613,0L53.613,0z M37.534,33.9c7.813-8.622,16.834-13.305,23.597-5.639 c1.773,0.084,3.359,0.671,4.684,1.921c2.781,2.615,3.213,7.508,1.941,11.394v3.392c0.861,0.567,1.418,1.628,1.67,2.835 c0.168,0.777,0.211,1.638,0.125,2.457c-0.082,0.851-0.293,1.659-0.629,2.332c-0.482,0.956-1.219,1.627-2.215,1.774 c-0.979,1.04-1.934,2.153-2.783,3.224c-0.936,1.176-1.734,2.289-2.289,3.203c-0.432,0.704-0.295,1.166-0.137,1.691 c0.072,0.262,0.156,0.535,0.209,0.829c1.713,0.367,3.256,0.661,4.643,0.924c8.811,1.648,14.01,2.163,14.01,13.631 c0,0.588-0.473,1.061-1.061,1.061H30.697c-0.588,0-1.061-0.473-1.061-1.061c0-11.468,5.189-11.982,14.01-13.631 c1.397-0.263,2.961-0.557,4.673-0.924c0.063-0.231,0.137-0.441,0.21-0.651c0.178-0.504,0.357-1.008-0.168-1.858 c-0.557-0.914-1.355-2.026-2.289-3.203c-0.851-1.071-1.807-2.184-2.783-3.224c-0.998-0.146-1.733-0.819-2.216-1.774 c-0.336-0.662-0.546-1.481-0.63-2.331c-0.074-0.819-0.032-1.68,0.126-2.458c0.252-1.208,0.798-2.258,1.648-2.825l-1.145-0.683 c-0.304-3.392,0.588-9.283-3.55-10.396L37.534,33.9L37.534,33.9z M87.283,19.942C78.668,11.328,66.75,5.979,53.613,5.979 c-13.138,0-25.056,5.35-33.67,13.963c-8.614,8.614-13.964,20.532-13.964,33.67c0,13.138,5.35,25.056,13.964,33.67 c8.614,8.614,20.532,13.964,33.67,13.964c13.137,0,25.055-5.35,33.67-13.964c8.613-8.614,13.963-20.532,13.963-33.67 C101.246,40.474,95.896,28.556,87.283,19.942L87.283,19.942L87.283,19.942z"></path></g></svg></strong>DP</a></li>
+          <li class="page"><a class="pg-link" href="/coming-soon"><strong style="background: none;position: relative; top: 11px;"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" height="2rem" width="2rem" viewBox="0 0 122.64 122.88" style="background: none;"><path fill="#b547ff"d="M104,31.15c2.31,5.65,5.11,11.94,6.52,17.55a51.83,51.83,0,0,1,1.54,15.24,50.9,50.9,0,0,1-3,15,49.87,49.87,0,0,1-7.24,13.23A49.12,49.12,0,0,1,91,102.49h0a54.85,54.85,0,0,1-4.74,3q-2.44,1.38-5,2.49a52,52,0,0,1-11.38,3.56,49.5,49.5,0,0,1-11.67.82L57,112.28l-2.76,10.28,1.89.15A60.44,60.44,0,0,0,71.05,122a63,63,0,0,0,14.51-4.42q2.94-1.3,5.83-2.93c1.87-1.06,3.75-2.25,5.62-3.55A59.59,59.59,0,0,0,119,82.48,61.68,61.68,0,0,0,120.7,46.1c-2-5.77-4.18-13.39-8.31-19.22-2.73-3.86-10.73-1.57-8.35,4.27ZM56,44.74a5.34,5.34,0,1,1,10.67,0V56.1H78a5.34,5.34,0,0,1,0,10.68H66.66V78.14a5.34,5.34,0,1,1-10.67,0V66.78H44.62a5.34,5.34,0,1,1,0-10.68H56V44.74ZM24.25,110.36a59.9,59.9,0,0,0,11.46,7l1.69.79,2.75-10.25L39,107.35a49.27,49.27,0,0,1-8.38-5.28,50.34,50.34,0,0,1-7.25-6.93l-.85-1-9.17,5.29,1.18,1.43a61.27,61.27,0,0,0,9.72,9.48ZM.57,69.53A59.49,59.49,0,0,0,4,82.67l.65,1.72,9.17-5.29-.44-1.24a49.32,49.32,0,0,1-2.4-9.72,48.75,48.75,0,0,1-.37-10l.07-1.29L.41,54.15.24,56A58.82,58.82,0,0,0,.57,69.53ZM8.38,31c-.92,1.55-1.75,3.11-2.51,4.7l-.81,1.7,10.25,2.75L15.89,39c.58-1.13,1.19-2.23,1.83-3.29s1.35-2.13,2.1-3.17a61.6,61.6,0,0,1,3.9-4.93A53.89,53.89,0,0,1,28,23.22l.93-.85-5.31-9.21-1.44,1.25a66.4,66.4,0,0,0-5.74,5.65,72.56,72.56,0,0,0-5.15,6.41c-1.05,1.48-2,3-2.92,4.5ZM50.44.78A54.27,54.27,0,0,0,40.27,3.52l-1.74.65,5.3,9.18,1.22-.43a44.39,44.39,0,0,1,15.71-2.43c1.21,0,2.48.11,3.79.26s2.51.33,3.74.58,2.55.56,3.8.93,2.5.8,3.79,1.3h0a5.24,5.24,0,1,0,3.79-9.77C78.15,3.2,76.59,2.67,75,2.2s-3.12-.84-4.65-1.15S67.28.5,65.76.33,62.63.05,61,0A55.87,55.87,0,0,0,50.44.78Z"/></svg></strong> Stories</a></li>
 
         </ul>
           <div class="search-div">
@@ -725,7 +773,7 @@ nav .logo-name{
         </div>
 </div>
   <div class="after-cont">
-    <div>
+    <div style="background: none;">
     <h2>
         <strong class="not">
             Instagram Donwloader 
@@ -759,7 +807,7 @@ nav .logo-name{
 
   <div class="right card">
     <h2 class="card-title">Features</h2>
-    <ul>
+    <ul class="bunz">
       <li class="li1">Unlimited downloads and always free</li>
       <li class="li2">High-speed video converter</li>
       <li class="li3">No registration required</li>
@@ -1238,12 +1286,12 @@ downloadForm.addEventListener('submit', async (e) => {
     nextLinkElement.style.display = 'block';
     if (validation.type === 'post') {
         nextLinkElement.innerHTML = `
-            Dear User, This URL is a <strong>Post URL</strong>. To download any Instagram post, click 
+            Dear User, This URL look's like a <strong style="background:none;">Post URL</strong>. To download any Instagram post, click 
             <a href="/" style="background: none;">here</a>.
         `;
     } else if (validation.type === 'profile') {
         nextLinkElement.innerHTML = `
-            Dear User, This URL is a <strong>Profile Picture URL</strong>. To download a profile picture, click 
+            Dear User, This URL is a <strong style="background:none;">Profile Picture URL</strong>. To download any Instagram profile picture, click 
             <a href="/mp3" style="background: none;">here</a>.
         `;
     }
