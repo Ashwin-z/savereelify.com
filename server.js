@@ -21,17 +21,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Security middleware
-// app.use(helmet({
-//     contentSecurityPolicy: {
-//         directives: {
-//             defaultSrc: ["'self'"],
-//             scriptSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com'],
-//             imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-//             mediaSrc: ["'self'", 'https:', 'blob:'],
-//             connectSrc: ["'self'", 'https://api.instagram.com']
-//         }
-//     }
-// }));
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com'],
+            imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
+            mediaSrc: ["'self'", 'https:', 'blob:'],
+            connectSrc: ["'self'", 'https://api.instagram.com']
+        }
+    }
+}));
 
 // Rate limiting
 const limiter = rateLimit({
