@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 
 
 nav{
-    display: flex;
+        display: flex;
     height: 80px;
     width: 100%;
     background: none;
@@ -915,11 +915,12 @@ font-weight: 500;
   }
 
   nav ul{
-    position: fixed;
+    position: absolute;
     top: 80px;
     left: -100%;
-    background: white;
-    height: 100vh;
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+  
+    height: 337px;
     width: 100%;
     text-align: center;
     display: block;

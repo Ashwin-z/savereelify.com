@@ -350,7 +350,8 @@
         .lem{
           margin: 0;
           height: 39px;
-          background-color: purple;
+          background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+        
         }
         
         
@@ -362,7 +363,8 @@
         .dropdown{
           position: relative;
         margin-left: 0;
-            background: purple;
+        background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
+      
             width: 100%;
         }
         
@@ -387,7 +389,7 @@
             position: absolute;
             top: 80px;
             /* left: -100%; */
-            background: white;
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
             height: 340px;
             width: 100%;
             text-align: center;
@@ -415,13 +417,13 @@
           #click:checked ~ ul li a{
             margin-left: 0px;
             transition: 0.3s ease;
-            background: purple;
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCB045);
           }
-          nav ul li a.active,
+          /* nav ul li a.active,
           nav ul li a:hover{
             background: none;
             color: red;
-          }
+          } */
         
           .content{
             width: 100%;
@@ -535,7 +537,7 @@
           <li><a href="/">Post Downloader</a></li>
           <li><a href="/mp3">Profile Pic Viewer/Downloader</a></li>
           <li class="lem" style=""><a class="poondi" href="#" style="padding: 0;">    <div class="dropdown">
-            <span id="selectedItem">English</span> <strong class="dog"><i style="background: none;" class="fa-solid fa-caret-down"></i></strong>
+            <span id="selectedItem">English   </span> <strong class="dog">   <i style="background: none;color: white;" class="fa-solid fa-caret-down"></i></strong>
             <div class="dropdown-content" style="cursor: pointer;">
               <a style="background-color: #e0e0e0" id="reloadLink" class="dropdown-item" onclick="selectItem('English')" data-reload lang="English">English</a>
 
