@@ -416,9 +416,27 @@ nav ul{
 }
 
 
+@media (max-width: 400px) {
+
+.pg-link[href="/mp3"] {
+  text-align: center;
+    width: 200px;
+    /* height: 200px; */
+    background-color: #c70de0;
+    z-index: 1;
+    padding: 0.6rem 0.3rem;
+    color: white;
+    position: relative;
+    border-radius: 0.5rem;
+  
+}
+.pg-link > strong {
+    top: 10px;
+}
+}
 
 
-@media (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) {
   .pg-link[href="/mp3"] {
     width: 200px;
     /* height: 200px; */

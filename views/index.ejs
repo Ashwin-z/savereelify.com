@@ -553,24 +553,24 @@ top: 8px;
     position: relative; */
 }
 
+
+@media (max-width: 400px) {
+  .page {
+    display: inline-block;
+    margin-right: 15px;
+    background: none;
+}
 .pg-link[href="/index"] {
   text-align: center;
     width: 200px;
     /* height: 200px; */
     background-color: #c70de0;
     z-index: 1;
-    padding: 0.38rem 1.6rem;
+    padding: 0.6rem 0.3rem;
     color: white;
     position: relative;
     border-radius: 0.5rem;
-   
-
-}
-@media (max-width: 400px) {
-  .page {
-    display: inline-block;
-    margin-right: 17px;
-    background: none;
+  
 }
 }
 
@@ -630,9 +630,18 @@ nav .logo-name{
 }
 
 
+@media (max-width: 400px) {
+  .pg-link[href="/"] {
+    padding: 0.69rem 0.7rem;
+  }
+  .pg-link > strong{
+      top: 10px;
+  }
 
+  
+}
 
-@media (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) {
   .pg-link > strong {
     top: 10px;
 }

@@ -287,7 +287,19 @@ background: none;
     
 }
 
-@media (max-width: 601px) {
+@media (max-width: 400px) {
+  .pg-link[href="/"] {
+    padding: 0.69rem 0.7rem;
+  }
+  .pg-link > strong{
+      top: 10px;
+  }
+.sahi{
+      top: 10px;
+  }
+  
+}
+@media (min-width: 401px) and (max-width: 601px) {
   .pg-link[href="/"] {
     text-align: center;
     width: 200px;
@@ -313,6 +325,8 @@ background: none;
       top: 10px;
   }
 }
+
+
 .next-link{
   background: white;
     text-align: center;
@@ -322,7 +336,6 @@ background: none;
     color: red;
     font-weight: 600;
 }
-
 
 @media (max-width: 480px) {
   .pg-link > strong {
