@@ -10,7 +10,7 @@ const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const validator = require('validator');
 const app = express();
-
+app.set('trust proxy', 1);
 // Middleware
 app.use(cors());
 app.use(helmet());
@@ -99,7 +99,8 @@ router.get('/download', async (req, res) => {
             responseType: 'stream',
             timeout: 60000,
             headers: {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36'
             }
         });
 
