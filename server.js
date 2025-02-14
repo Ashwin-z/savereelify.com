@@ -12,7 +12,7 @@ const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+app.set('trust proxy', 1);
 // Middleware setup
 app.use(cors({ origin: 'https://savereelify.com' }));
 
@@ -310,8 +310,8 @@ app.get('/download', async (req, res) => {
 
     try {
         const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 60000);
- 
+        const timeout = setTimeout(() => controller.abort(), 30000);
+
         const response = await axios({
             method: 'GET',
             url: url,
@@ -321,7 +321,7 @@ app.get('/download', async (req, res) => {
                 'Accept-Encoding': 'gzip, deflate, br',
                 'Connection': 'keep-alive'
             },
-            timeout: 60000,
+            timeout: 30000,
             maxContentLength: 200 * 1024 * 1024,
             signal: controller.signal,
             onDownloadProgress: (progressEvent) => {
