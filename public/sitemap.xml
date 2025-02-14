@@ -5,7 +5,11 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://savereelify.com/index</loc>
+        <loc>https://savereelify.com/instagram-dp</loc>
+        <priority>0.2</priority>
+    </url>
+     <url>
+        <loc>https://savereelify.com/reels-downloader</loc>
         <priority>0.8</priority>
     </url>
     <url>
