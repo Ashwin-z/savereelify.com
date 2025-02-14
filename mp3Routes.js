@@ -15,8 +15,8 @@ app.use(express.static('public'));
 
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 // Define the route for rendering mp3.ejs
-router.get('/mp3', (req, res) => { 
-    res.render('mp3');
+router.get('/instagram-dp', (req, res) => { 
+    res.render('instagram-dp');
 });
 
 

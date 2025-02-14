@@ -54,8 +54,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'views', 'assets')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
-app.get('/index', (req, res) => {
-    res.render('index');
+app.get('/reels-downloader', (req, res) => {
+    res.render('reels-downloader');
 })
 app.get('/coming-soon', (req, res) => {
     res.render('Coming');
@@ -310,8 +310,8 @@ app.get('/download', async (req, res) => {
 
     try {
         const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 30000);
-
+        const timeout = setTimeout(() => controller.abort(), 60000);
+ 
         const response = await axios({
             method: 'GET',
             url: url,
