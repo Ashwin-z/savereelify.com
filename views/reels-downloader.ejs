@@ -1263,6 +1263,10 @@ function validateInstagramUrl(url) {
     return { isValid: false };
 }
 
+function cleanInstagramReelUrl(url) {
+    return url.replace(/(\?.*|#.*)$/, ''); // Remove query parameters and fragments
+}
+
 downloadForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     let url = urlInput.value.trim();
@@ -1270,10 +1274,14 @@ downloadForm.addEventListener('submit', async (e) => {
     // Normalize the URL by replacing "reels" with "reel" if necessary
     url = url.replace(/\/reels\//, '/reel/');
 
+    // Clean the Instagram reel URL
+    url = cleanInstagramReelUrl(url);
+
+    console.log("Final URL sent to the server:", url); // Log the final cleaned URL
+
     const validation = validateInstagramUrl(url);
 
     if (!validation.isValid) {
-        // Show SweetAlert for invalid URL
         Swal.fire({
             icon: 'error',
             title: 'Invalid URL',
@@ -1282,7 +1290,6 @@ downloadForm.addEventListener('submit', async (e) => {
         return;
     }
 
-    // If the URL is already a reel URL, proceed directly to fetch data
     if (validation.type === 'reel') {
         try {
             loader.style.display = 'block';
@@ -1295,7 +1302,7 @@ downloadForm.addEventListener('submit', async (e) => {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
                 },
-                body: JSON.stringify({ url }),
+                body: JSON.stringify({ url }), // Send the cleaned URL
             });
 
             const data = await response.json();

@@ -86,7 +86,7 @@ app.use('/', reelRoutes);
 
 // Cache setup
 const cache = new Map();
-const CACHE_DURATION = 3600000; // 1 hour
+const CACHE_DURATION = 600000; // 1 hour
 
 // Browser Manager Class
 class BrowserManager {
@@ -321,7 +321,7 @@ app.get('/download', async (req, res) => {
                 'Accept-Encoding': 'gzip, deflate, br',
                 'Connection': 'keep-alive'
             },
-            timeout: 30000,
+            timeout: 60000,
             maxContentLength: 200 * 1024 * 1024,
             signal: controller.signal,
             onDownloadProgress: (progressEvent) => {
