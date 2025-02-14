@@ -9,6 +9,10 @@
 } 
 
 
+b{
+  background: none;
+}
+
 body::-webkit-scrollbar {
     display: none;
 
@@ -34,6 +38,8 @@ nav{
   background: none;
 
 }
+
+
 .logo-img{
   position: absolute;
   border-radius: 20%;
