@@ -84,6 +84,9 @@ app.use('/', mp3Routes);
 const reelRoutes = require('./post');
 app.use('/', reelRoutes);
 
+const story = require('./story');
+app.use('/', story);
+
 // Cache setup
 const cache = new Map();
 const CACHE_DURATION = 600000; // 1 hour
