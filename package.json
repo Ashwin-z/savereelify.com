@@ -1,5 +1,5 @@
 {
-  "name": "y2d.com",
+  "name": "savereelify.com",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -12,9 +12,6 @@
   "author": "ashwin",
   "license": "ISC",
   "dependencies": {
-    "@distube/ytdl-core": "^4.15.8",
-    "@ffmpeg-installer/ffmpeg": "^1.1.0",
-    "@ngrok/ngrok": "^1.4.1",
     "axios": "^1.7.7",
     "axios-proxy-fix": "^0.16.3",
     "axios-retry": "^4.5.0",
@@ -62,8 +59,7 @@
     "unirest": "^0.6.0",
     "update": "^0.7.4",
     "winston": "^3.17.0",
-    "xss-clean": "^0.1.4",
-    "ytdl-core": "^4.11.5"
+    "xss-clean": "^0.1.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
