@@ -6,11 +6,11 @@
     </url>
     <url>
         <loc>https://savereelify.com/instagram-dp</loc>
-        <priority>0.2</priority>
+        <priority>1.0</priority>
     </url>
-     <url>
+    <url>
         <loc>https://savereelify.com/reels-downloader</loc>
-        <priority>0.8</priority>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://savereelify.com/about</loc>
@@ -20,5 +20,4 @@
         <loc>https://savereelify.com/contact</loc>
         <priority>0.6</priority>
     </url>
-    <!-- Add more pages as needed -->
 </urlset>
