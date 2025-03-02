@@ -102,6 +102,7 @@ class BrowserManager {
     async initialize() {
         if (!this.browser) {
             this.browser = await puppeteer.launch({
+                // executablePath: '/path/to/Chrome',
                 headless: true,
                 args: [
                     '--no-sandbox',
