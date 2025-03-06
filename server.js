@@ -96,8 +96,8 @@ class BrowserManager {
     constructor() {
         this.browser = null;
         this.pages = new Map();
-        this.maxPages = 3;
-    }
+        this.maxPages = 5;
+    } 
 
     async initialize() {
         if (!this.browser) {
