@@ -89,7 +89,7 @@ app.use('/', story);
 
 // Cache setup
 const cache = new Map();
-const CACHE_DURATION = 600000; // 1 hour
+const CACHE_DURATION = 120000; // 1 hour
 
 // Browser Manager Class
 class BrowserManager {
