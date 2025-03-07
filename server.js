@@ -159,7 +159,7 @@ class BrowserManager {
         await Promise.all([
             page.setRequestInterception(true),
             page.setDefaultNavigationTimeout(15000),
-            page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+            page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
         ]);
 
         page.on('request', (req) => {
