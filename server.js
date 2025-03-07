@@ -2,7 +2,10 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+
+puppeteer.use(StealthPlugin());
 const instagramGetUrl = require('instagram-url-direct');
 const bodyParser = require('body-parser');
 const cors = require('cors');
