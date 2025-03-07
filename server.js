@@ -100,12 +100,12 @@ class BrowserManager {
         this.browser = null;
         this.pages = new Map();
         this.maxPages = 5;
-    } 
+        this.requestCount = 0; // Track requests for auto-restart
+    }
 
     async initialize() {
         if (!this.browser) {
             this.browser = await puppeteer.launch({
-                // executablePath: '/path/to/Chrome',
                 headless: true,
                 args: [
                     '--no-sandbox',
@@ -135,6 +135,14 @@ class BrowserManager {
     async getPage() {
         await this.initialize();
         
+        // Restart browser if request count is too high (avoid detection)
+        if (this.requestCount >= 20) {
+            console.log("Restarting browser to avoid detection...");
+            await this.cleanup();
+            await this.initialize();
+            this.requestCount = 0;
+        }
+
         // Find available page
         for (const [id, page] of this.pages) {
             if (!page.inUse) {
@@ -159,19 +167,19 @@ class BrowserManager {
         await Promise.all([
             page.setRequestInterception(true),
             page.setDefaultNavigationTimeout(15000),
-            page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+            page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
         ]);
 
-        page.on('request', (req) => {
+        page.on("request", (req) => {
             const resourceType = req.resourceType();
-            if (['image', 'stylesheet', 'font', 'media', 'other'].includes(resourceType) ||
-                req.url().includes('analytics') ||
-                req.url().includes('logging')) {
+            if (["image", "stylesheet", "font", "media"].includes(resourceType)) {
                 req.abort();
             } else {
                 req.continue();
             }
         });
+
+        this.requestCount++; // Track requests
     }
 
     async releasePage(id) {
@@ -192,9 +200,9 @@ class BrowserManager {
 
 const browserManager = new BrowserManager();
 
-// URL validation
+// ✅ Fixed Instagram URL validation
 function validateInstagramUrl(url) {
-    const reelPattern = /^https:\/\/(?:www\.)?instagram\.com\/(?:reel|reels|tv)\/([A-Za-z0-9_-]{11})\/?(?:\?.*)?$/;
+    const reelPattern = /^https:\/\/(?:www\.)?instagram\.com\/(?:reel|reels|tv)\/([A-Za-z0-9_-]{10,15})\/?(?:\?.*)?$/;
     return reelPattern.test(url);
 }
 
@@ -208,29 +216,30 @@ async function fetchReelContent(url, page) {
         });
 
         await page.goto(url, {
-            waitUntil: 'domcontentloaded',
+            waitUntil: "domcontentloaded",
             timeout: 15000
         });
 
         const content = await page.evaluate(() => {
             const metaTags = {};
             document.querySelectorAll('meta[property^="og:"]').forEach(meta => {
-                metaTags[meta.getAttribute('property')] = meta.getAttribute('content');
+                metaTags[meta.getAttribute("property")] = meta.getAttribute("content");
             });
 
             return {
-                thumbnail: metaTags['og:image'] || null,
-                title: document.title?.slice(0, 50) || 'Instagram Reel',
-                username: metaTags['og:title'] || null
+                thumbnail: metaTags["og:image"] || null,
+                title: document.title?.slice(0, 50) || "Instagram Reel",
+                username: metaTags["og:title"] || null
             };
         });
 
         return content;
     } catch (error) {
-        console.error('Error in fetchReelContent:', error);
+        console.error("Error in fetchReelContent:", error);
         throw error;
     }
 }
+
 
 // Routes
 app.get('/', (req, res) => { 
