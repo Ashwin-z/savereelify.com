@@ -96,8 +96,8 @@ const CACHE_DURATION = 120000; // 1 hour
 // Proxy configuration
 const PROXY_USERNAME = "yzvhrgqc";
 const PROXY_PASSWORD = "rtbbh5yvx2ru";
-const PROXY_HOST = "38.154.227.167";
-const PROXY_PORT = "5868";
+const PROXY_HOST = "38.153.152.244";
+const PROXY_PORT = "9594";
 const PROXY_URL = `http://${PROXY_USERNAME}:${PROXY_PASSWORD}@${PROXY_HOST}:${PROXY_PORT}`;
 
 // Browser Manager Class
