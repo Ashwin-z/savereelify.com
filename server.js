@@ -94,10 +94,10 @@ const cache = new Map();
 const CACHE_DURATION = 120000; // 1 hour
 
 // Proxy configuration
-const PROXY_USERNAME = "yzvhrgqc";
-const PROXY_PASSWORD = "rtbbh5yvx2ru";
-const PROXY_HOST = "38.153.152.244";
-const PROXY_PORT = "9594";
+const PROXY_USERNAME = "jyeeldno";
+const PROXY_PASSWORD = "0hy2vidll5xo";
+const PROXY_HOST = "86.38.234.176";
+const PROXY_PORT = "6630";
 const PROXY_URL = `http://${PROXY_USERNAME}:${PROXY_PASSWORD}@${PROXY_HOST}:${PROXY_PORT}`;
 
 // Browser Manager Class
