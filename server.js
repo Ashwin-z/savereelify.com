@@ -91,14 +91,14 @@ const story = require('./story');
 app.use('/', story);
 // Cache setup
 const cache = new Map();
-const CACHE_DURATION = 120000; 
+const CACHE_DURATION = 120000; // 1 hour
 
 // Proxy configuration
-// const PROXY_USERNAME = "jyeeldno";
-// const PROXY_PASSWORD = "0hy2vidll5xo";
-// const PROXY_HOST = "86.38.234.176";
-// const PROXY_PORT = "6630";
-// const PROXY_URL = `http://${PROXY_USERNAME}:${PROXY_PASSWORD}@${PROXY_HOST}:${PROXY_PORT}`;
+const PROXY_USERNAME = "jyeeldno";
+const PROXY_PASSWORD = "0hy2vidll5xo";
+const PROXY_HOST = "86.38.234.176";
+const PROXY_PORT = "6630";
+const PROXY_URL = `http://${PROXY_USERNAME}:${PROXY_PASSWORD}@${PROXY_HOST}:${PROXY_PORT}`;
 
 // Browser Manager Class
 class BrowserManager {
@@ -111,9 +111,9 @@ class BrowserManager {
     async initialize() {
         if (!this.browser) {
             this.browser = await puppeteer.launch({
-                // executablePath: '/path/to/Chrome',
                 headless: true,
                 args: [
+                    `--proxy-server=${PROXY_HOST}:${PROXY_PORT}`,  // Use Proxy
                     '--no-sandbox',
                     '--disable-setuid-sandbox',
                     '--disable-dev-shm-usage',
@@ -152,6 +152,13 @@ class BrowserManager {
         // Create new page if limit not reached
         if (this.pages.size < this.maxPages) {
             const page = await this.browser.newPage();
+
+            // Authenticate proxy
+            await page.authenticate({
+                username: PROXY_USERNAME,
+                password: PROXY_PASSWORD
+            });
+
             await this.setupPage(page);
             const id = Date.now().toString();
             this.pages.set(id, { page, inUse: true });
